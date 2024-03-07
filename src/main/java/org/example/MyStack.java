@@ -12,13 +12,13 @@ public class MyStack<E> extends ArrayList<E>{
     }
 
     public void push(E e) {
-        add(e);
+        this.delegate.add(e);
     }
 
     public E pop() {
-        if (isEmpty()) throw new EmptyStackException();
-        E e = get(size() - 1);
-        remove(size() -1 );
+        if (this.delegate.isEmpty()) throw new EmptyStackException();
+        E e = this.delegate.get(this.delegate.size() - 1);
+        this.delegate.remove(size() -1 );
         return e;
     }
 
