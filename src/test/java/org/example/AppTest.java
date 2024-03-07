@@ -20,4 +20,23 @@ public class AppTest
 
         assertEquals(42, poppedValue);
     }
+
+    @Test
+    public void testIsEmpty(){
+        MyStack<Integer> emptyStack = new MyStack<>();
+        assertTrue(emptyStack.isEmpty());
+
+        MyStack<Integer> nonEmptyStack = new MyStack<>();
+        nonEmptyStack.push(123);
+        assertEquals(false,nonEmptyStack.isEmpty());
+    }
+
+    @Test
+    public void testSize() {
+        MyStack<String> stack = new MyStack<>();
+        assertEquals(0, stack.size());
+
+        stack.push("abc");
+        assertEquals(1,stack.size());
+    }
 }

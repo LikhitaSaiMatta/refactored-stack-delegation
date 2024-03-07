@@ -12,7 +12,7 @@ public class MyStack<E> {
     }
 
     public void push(E e) {
-        this.delegate.add(e);
+        delegate.add(e);
     }
 
     public E pop() {
@@ -22,4 +22,11 @@ public class MyStack<E> {
         return e;
     }
 
+    public boolean isEmpty() {
+        return delegate.isEmpty();
+    }
+
+    public int size() {
+        return delegate.size();
+    }
 }
